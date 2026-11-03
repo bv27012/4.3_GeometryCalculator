@@ -7,8 +7,9 @@ using namespace std;
 
 int main()
 {
-	//Declare constant.
+	//Declare and input for menu.
 	const double PI = 3.14;
+	int choice;
 
 	//Declare circle input variables.
 	double radius;
@@ -24,16 +25,12 @@ int main()
 	double height;
 	double tTotal;
 
-	//Menu prompt.
-	cout << "Geometry Calculator Menu. Which shape would you like to find the area of?" << endl;
-	cout << "1. Circle" << endl << "2. Rectangle" << endl << "3. Triangle" << endl;
-	int choice;
-	cin >> choice;
-
 	//Menu switch statement.
-
 	do
 	{
+		cout << "Geometry Calculator Menu. Which shape would you like to find the area of?" << endl;
+		cout << "1. Circle" << endl << "2. Rectangle" << endl << "3. Triangle" << endl << "4. Quit Program" << endl << endl;
+		cin >> choice;
 		switch (choice)
 		{
 		case 1:
@@ -41,7 +38,7 @@ int main()
 			cout << "Input a radius." << endl;
 			cin >> radius;
 			cTotal = PI * pow(radius, 2);
-			cout << endl << "Area: " << cTotal << endl;
+			cout << endl << "Area: " << cTotal << endl << endl;
 			break;
 		case 2:
 			cout << endl << "Rectangle Area Formula: length * width" << endl;
@@ -50,7 +47,7 @@ int main()
 			cout << endl << "Input a width." << endl;
 			cin >> width;
 			rTotal = length * width;
-			cout << endl << "Area: " << rTotal << endl;
+			cout << endl << "Area: " << rTotal << endl << endl;
 			break;
 		case 3:
 			cout << endl << "Triangle Area Formula: 1/2(base * height)" << endl;
@@ -59,11 +56,13 @@ int main()
 			cout << endl << "Input a height." << endl;
 			cin >> height;
 			tTotal = 0.5 * base * height;
-			cout << endl << "Area: " << tTotal << endl;
+			cout << endl << "Area: " << tTotal << endl << endl;
 			break;
 		}
 	} while (choice != 4);
 
+	if (choice == 4)
+		cout << endl << "Quitting program." << endl;
 
 	return 0;
 }
