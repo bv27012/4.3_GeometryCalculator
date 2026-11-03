@@ -58,6 +58,8 @@ int main()
 			tTotal = 0.5 * base * height;
 			cout << endl << "Area: " << tTotal << endl << endl;
 			break;
+		default:
+			cout << "Invalid menu option." << endl;
 		}
 	} while (choice != 4);
 
