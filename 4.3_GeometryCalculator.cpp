@@ -24,5 +24,9 @@ int main()
 	double height;
 	double tTotal;
 
+	//Menu prompt.
+	cout << "Geometry Calculator Menu. Which shape would you like to find the area of?" << endl;
+	cout << "1. Circle" << endl << "2. Rectangle" << endl << "3. Triangle" << endl;
+
 	return 0;
 }
