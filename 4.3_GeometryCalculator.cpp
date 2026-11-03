@@ -7,7 +7,22 @@ using namespace std;
 
 int main()
 {
+	//Declare constant.
+	const double PI = 3.14;
 
+	//Declare circle input variables.
+	double radius;
+	double cTotal;
+
+	//Declare rectangle input variables.
+	double length;
+	double width;
+	double rTotal;
+
+	//Declare triangle input variables.
+	double base;
+	double height;
+	double tTotal;
 
 	return 0;
 }
