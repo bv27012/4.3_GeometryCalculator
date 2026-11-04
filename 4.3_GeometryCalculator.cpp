@@ -37,26 +37,52 @@ int main()
 			cout << endl << "Circle Area Formula: pi * radius^2" << endl;
 			cout << "Input a radius." << endl;
 			cin >> radius;
-			cTotal = PI * pow(radius, 2);
-			cout << endl << "Area: " << cTotal << endl << endl;
+			if (radius < 0)
+			{
+				cout << endl << "ERROR: Do not enter negative dimensions." << endl << endl;
+			}
+			else {
+				cTotal = PI * pow(radius, 2);
+				cout << endl << "Area: " << cTotal << endl << endl;
+			}
 			break;
 		case 2:
 			cout << endl << "Rectangle Area Formula: length * width" << endl;
 			cout << "Input a length." << endl;
 			cin >> length;
-			cout << endl << "Input a width." << endl;
-			cin >> width;
-			rTotal = length * width;
-			cout << endl << "Area: " << rTotal << endl << endl;
+			if (length < 0) {
+				cout << endl << "ERROR: Do not enter negative dimensions." << endl << endl;
+			}
+			else {
+				cout << endl << "Input a width." << endl;
+				cin >> width;
+				if (width < 0) {
+					cout << endl << "ERROR: Do not enter negative dimensions." << endl << endl;
+				}
+				else {
+					rTotal = length * width;
+					cout << endl << "Area: " << rTotal << endl << endl;
+				}
+			}
 			break;
 		case 3:
 			cout << endl << "Triangle Area Formula: 1/2(base * height)" << endl;
 			cout << "Input a base." << endl;
 			cin >> base;
-			cout << endl << "Input a height." << endl;
-			cin >> height;
-			tTotal = 0.5 * base * height;
-			cout << endl << "Area: " << tTotal << endl << endl;
+			if (base < 0) {
+				cout << endl << "ERROR: Do not enter negative dimensions." << endl << endl;
+			}
+			else {
+				cout << endl << "Input a height." << endl;
+				cin >> height;
+				if (height < 0) {
+					cout << endl << "ERROR: Do not enter negative dimensions." << endl << endl;
+				}
+				else {
+					tTotal = 0.5 * base * height;
+					cout << endl << "Area: " << tTotal << endl << endl;
+				}
+			}
 			break;
 		default:
 			cout << "Invalid menu option." << endl;
